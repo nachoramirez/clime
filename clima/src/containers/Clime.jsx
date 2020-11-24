@@ -1,7 +1,7 @@
 import React from "react"
 import { createUseStyles } from "react-jss"
 import Today from "../components/Today"
-import Week from '../components/Week'
+import Week from "../components/Week"
 
 import Container from "./Container"
 
@@ -22,7 +22,10 @@ const useStyles = createUseStyles({
   },
 })
 
-const Clime = () => {
+const Clime = ({ data }) => {
+  const { current, daily } = data
+  
+
   const classes = useStyles()
 
   return (
@@ -34,9 +37,9 @@ const Clime = () => {
     >
       <div className={classes.Clime}>
         <h1 className={classes.Location}> Buenos Aires, Argentina</h1>
-        <Today />
+        <Today data={current}/>
 
-        <Week />
+        <Week data={daily} />
       </div>
     </Container>
   )

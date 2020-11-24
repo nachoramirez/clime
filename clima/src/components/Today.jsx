@@ -1,25 +1,31 @@
-import React from "react"
+import React, { yseuseEffect } from "react"
 import { createUseStyles } from "react-jss"
 import Container from "../containers/Container"
 
 const useStyles = createUseStyles({
   Temperature: {
-    margin: '0 0 0 15px',
+    margin: "0 0 0 15px",
     font: {
       size: 100,
     },
   },
   Image: {
-      height: 150,
+    height: 150,
   },
   Stats: {
-    textAlign: 'right',
-    padding: "0 20px 0 0 "
-  }
+    textAlign: "right",
+    padding: "0 20px 0 0 ",
+  },
 })
 
-const Today = () => {
+const Today = (props) => {
+  const { temp, humidity, wind_speed, feels_like, weather } = props.data
+
   const classes = useStyles()
+
+  const { icon } = weather[0]
+
+  const weatherIcon = `http://openweathermap.org/img/wn/${icon}.png`
 
   return (
     <Container
@@ -28,12 +34,12 @@ const Today = () => {
       width="100%"
       height="50%"
     >
-      <h1 className={classes.Temperature}> 25°</h1>
-      <img className={classes.Image} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQniAljr4He7F4Ba_7PcsXhldwDk9UHpQRzKQ&usqp=CAU" />
-      <div className={classes.Stats} >
-        <h4> Precipitation: 0%</h4>
-        <h4> Humedity: 52%</h4>
-        <h4> Wind: 29 km/h </h4>
+      <h1 className={classes.Temperature}> {temp.toFixed(1)}°</h1>
+      <img className={classes.Image} src={weatherIcon} />
+      <div className={classes.Stats}>
+        <h4> Sensacion Termica: {feels_like.toFixed(1)}</h4>
+        <h4> Humedity: {humidity}%</h4>
+        <h4> Wind: {wind_speed} km/h </h4>
       </div>
     </Container>
   )
