@@ -25,7 +25,7 @@ const Today = (props) => {
 
   const { icon } = weather[0]
 
-  const weatherIcon = `http://openweathermap.org/img/wn/${icon}.png`
+  const weatherIcon = `http://openweathermap.org/img/wn/${icon}@2x.png`
 
   return (
     <Container
@@ -37,7 +37,7 @@ const Today = (props) => {
       <h1 className={classes.Temperature}> {temp.toFixed(1)}°</h1>
       <img className={classes.Image} src={weatherIcon} />
       <div className={classes.Stats}>
-        <h4> Sensacion Termica: {feels_like.toFixed(1)}</h4>
+        <h4> Apparent temperature: {feels_like.toFixed(1)}</h4>
         <h4> Humedity: {humidity}%</h4>
         <h4> Wind: {wind_speed} km/h </h4>
       </div>

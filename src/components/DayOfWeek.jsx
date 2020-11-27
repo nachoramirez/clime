@@ -8,8 +8,14 @@ const useStyles = createUseStyles({
   },
 })
 
-const DayOfWeek = ({ day, maxmin }) => {
+const DayOfWeek = ({ day, maxmin, weather}) => {
   const classes = useStyles()
+  
+  const { icon } = weather[0]
+
+  const weatherIcon = `http://openweathermap.org/img/wn/${icon}@2x.png`
+
+
   return (
     <Container
       flexDirection="column"
@@ -21,7 +27,7 @@ const DayOfWeek = ({ day, maxmin }) => {
       <h1> {day} </h1>
       <img
         className={classes.Image}
-        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQniAljr4He7F4Ba_7PcsXhldwDk9UHpQRzKQ&usqp=CAU"'
+        src={weatherIcon}
       />
       <h3> {maxmin}</h3>
     </Container>

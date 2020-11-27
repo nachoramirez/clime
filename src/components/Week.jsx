@@ -1,20 +1,26 @@
 import React from "react"
 import Container from "../containers/Container"
-import DayOfWeek from './DayOfWeek'
+import DayOfWeek from "./DayOfWeek"
 
-
-const Week = () => {
+const Week = ({ data, today }) => {
   return (
     <Container>
-        <DayOfWeek day='tue' maxmin='30/18'/>
-        <DayOfWeek day='wen' maxmin='30/18'/>
-        <DayOfWeek day='thu'maxmin='30/18'/>
-        <DayOfWeek day='fri'maxmin='30/18'/>
-        <DayOfWeek day='sat'maxmin='30/18'/>
-        <DayOfWeek day='sun'maxmin='30/18'/>
-        <DayOfWeek day='mon'maxmin='30/18'/>
-        <DayOfWeek day='tue' maxmin='30/18'/>
+      {data.map((element, index) => {
+        const { temp, weather } = element
 
+        const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",]
+
+        const day = days[today.getDay() + 1 + index]
+
+        return (
+          <DayOfWeek
+            key={index}
+            day={day}
+            maxmin={`${temp.min.toFixed(0)}/${temp.max.toFixed(0)}`}
+            weather={weather}
+          />
+        )
+      })}
     </Container>
   )
 }

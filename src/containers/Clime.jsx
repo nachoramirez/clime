@@ -24,7 +24,8 @@ const useStyles = createUseStyles({
 
 const Clime = ({ data }) => {
   const { current, daily } = data
-  
+ 
+  const date = new Date()
 
   const classes = useStyles()
 
@@ -39,7 +40,7 @@ const Clime = ({ data }) => {
         <h1 className={classes.Location}> Buenos Aires, Argentina</h1>
         <Today data={current}/>
 
-        <Week data={daily} />
+        <Week data={daily} today={date}/>
       </div>
     </Container>
   )
