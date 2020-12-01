@@ -1,4 +1,4 @@
-import React, { yseuseEffect } from "react"
+import React from "react"
 import { createUseStyles } from "react-jss"
 import Container from "../containers/Container"
 
@@ -25,7 +25,7 @@ const Today = (props) => {
 
   const { icon } = weather[0]
 
-  const weatherIcon = `http://openweathermap.org/img/wn/${icon}@2x.png`
+  const weatherIcon = require(`../assets/icons/${icon}.png`).default
 
   return (
     <Container

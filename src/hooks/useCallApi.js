@@ -7,7 +7,7 @@ const useCallApi = (API,initialState) => {
     fetch(API)
       .then((response) => response.json())
       .then((data) => setState(data))
-      .catch((err) => console.log(err))
+      .catch((err) => setState(err))
   }, [])
 
   return state

@@ -1,6 +1,6 @@
 import React from "react"
 import Container from "../containers/Container"
-import "../loading.css"
+import "../assets/loading.css"
 
 const Loading = () => {
   return (

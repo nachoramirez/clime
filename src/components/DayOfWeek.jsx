@@ -13,8 +13,7 @@ const DayOfWeek = ({ day, maxmin, weather}) => {
   
   const { icon } = weather[0]
 
-  const weatherIcon = `http://openweathermap.org/img/wn/${icon}@2x.png`
-
+  const weatherIcon = require(`../assets/icons/${icon}.png`).default
 
   return (
     <Container
