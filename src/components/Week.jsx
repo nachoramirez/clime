@@ -1,6 +1,6 @@
 import React from "react"
-import Container from "../containers/Container"
-import DayOfWeek from "./DayOfWeek"
+import {Container} from "../containers/Container.js"
+import DayOfWeek from "./DayOfWeek/DayOfWeek.jsx"
 
 const Week = ({ data, today }) => {
   return (
