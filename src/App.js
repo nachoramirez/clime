@@ -1,9 +1,9 @@
 import React from 'react'
 import Clime from './containers/Clime/Clime.jsx'
+import Today from './components/Today/Today.jsx'
 import useCallApi from './hooks/useCallApi'
 
-
-import Loading from './components/Loading/Loading.jsx'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 const App = () => {
 
@@ -11,11 +11,18 @@ const App = () => {
 
   const data = useCallApi(API,{})
 
-  console.log(data)
-
-  return ( data.lat === undefined ? <Loading /> :
-    <Clime data={data}/>
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Clime data={data}/>
+        </Route>
+        <Route exact path='/week/:key'>
+          <Clime data={data} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
-export default App;
+export default App

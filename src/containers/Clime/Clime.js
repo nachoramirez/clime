@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import { Container } from '../Container.js'
+import { Container,Border } from '../Container.js'
 
-export const Border = styled.div`
+export const ClimeBorder = styled(Border)`
   border-radius: 25px;
   padding: 15px 30px 30px 30px;
-  border: ${props => props.solid ? '1px #999999 solid' : '0px'};
-  box-shadow: ${props => props.shadow ? 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' : '0px'};
 `
 
 export const Location = styled.h1`

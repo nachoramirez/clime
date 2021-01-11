@@ -1,27 +1,26 @@
-import React from "react"
-import {DayOfWeekContainer} from "./DayOfWeek"
-import { createUseStyles } from "react-jss"
+import React from 'react'
+import { DayOfWeekContainer, Image, DayBorder } from './DayOfWeek'
 
+import { Link } from 'react-router-dom'
 
-const useStyles = createUseStyles({
-  Image: {
-    height: 50,
-  },
-})
-
-const DayOfWeek = ({ day, maxmin, weather }) => {
-  const classes = useStyles()
-
+const DayOfWeek = ({ day, maxmin, weather, id, path }) => {
   const { icon } = weather[0]
 
   const weatherIcon = require(`../../assets/icons/${icon}.png`).default
 
   return (
-    <DayOfWeekContainer>
-      <h1> {day} </h1>
-      <img className={classes.Image} alt="Weather Icon" src={weatherIcon} />
-      <h3> {maxmin}</h3>
-    </DayOfWeekContainer>
+    <Link
+      to={`/week/${id}`}
+      style={{ color: 'inherit', textDecoration: 'inherit' }}
+    >
+      <DayBorder display={path.slice(-1) == id? 'solid' : 'none'}>
+        <DayOfWeekContainer>
+          <h1> {day} </h1>
+          <Image alt="Weather Icon" src={weatherIcon} />
+          <h3> {maxmin}</h3>
+        </DayOfWeekContainer>
+      </DayBorder>
+    </Link>
   )
 }
 
