@@ -8,8 +8,14 @@ export const ClimeBorder = styled(Border)`
 
 export const Location = styled.h1`
   margin: 0;
-  font-size: 220%;
-  font-weight: 100;
+  font-size: 40px;
+  font-weight:1;
+
+
+  @media(max-width: 768px) {
+    font-size: 60px;
+  }
+
 `
 
 export const ClimeContainer = styled(Container)`
@@ -17,5 +23,4 @@ export const ClimeContainer = styled(Container)`
   align-items: center;
   width: 100%;
   height: 100vh;
-  
 `

@@ -21,8 +21,8 @@ const Today = (props) => {
       <Image src={weatherIcon} alt="Weather Icon" />
       <Stats>
         <h4>
-          Apparent temperature:
-          { current ?  feels_like.toFixed(1): feels_like.day.toFixed(1)}
+          A. T. : { current ?  feels_like.toFixed(1): feels_like.day.toFixed(1)}
+          °
         </h4>
         <h4> Humedity: {humidity}%</h4>
         <h4> Wind: {wind_speed} km/h </h4>
