@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/Clima/static/js/main.b8ad4a09.chunk.js",
-    "main.js.map": "/Clima/static/js/main.b8ad4a09.chunk.js.map",
+    "main.js": "/Clima/static/js/main.3a8d1905.chunk.js",
+    "main.js.map": "/Clima/static/js/main.3a8d1905.chunk.js.map",
     "runtime-main.js": "/Clima/static/js/runtime-main.bb2209b7.js",
     "runtime-main.js.map": "/Clima/static/js/runtime-main.bb2209b7.js.map",
-    "static/js/2.1be760d0.chunk.js": "/Clima/static/js/2.1be760d0.chunk.js",
-    "static/js/2.1be760d0.chunk.js.map": "/Clima/static/js/2.1be760d0.chunk.js.map",
+    "static/js/2.2d872b73.chunk.js": "/Clima/static/js/2.2d872b73.chunk.js",
+    "static/js/2.2d872b73.chunk.js.map": "/Clima/static/js/2.2d872b73.chunk.js.map",
     "index.html": "/Clima/index.html",
-    "static/js/2.1be760d0.chunk.js.LICENSE.txt": "/Clima/static/js/2.1be760d0.chunk.js.LICENSE.txt"
+    "static/js/2.2d872b73.chunk.js.LICENSE.txt": "/Clima/static/js/2.2d872b73.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb2209b7.js",
-    "static/js/2.1be760d0.chunk.js",
-    "static/js/main.b8ad4a09.chunk.js"
+    "static/js/2.2d872b73.chunk.js",
+    "static/js/main.3a8d1905.chunk.js"
   ]
 }
