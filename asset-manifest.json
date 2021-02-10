@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Clima/static/js/main.ae07949a.chunk.js",
-    "main.js.map": "/Clima/static/js/main.ae07949a.chunk.js.map",
+    "main.js": "/Clima/static/js/main.b8ad4a09.chunk.js",
+    "main.js.map": "/Clima/static/js/main.b8ad4a09.chunk.js.map",
     "runtime-main.js": "/Clima/static/js/runtime-main.bb2209b7.js",
     "runtime-main.js.map": "/Clima/static/js/runtime-main.bb2209b7.js.map",
     "static/js/2.1be760d0.chunk.js": "/Clima/static/js/2.1be760d0.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.bb2209b7.js",
     "static/js/2.1be760d0.chunk.js",
-    "static/js/main.ae07949a.chunk.js"
+    "static/js/main.b8ad4a09.chunk.js"
   ]
 }
