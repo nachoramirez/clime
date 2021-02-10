@@ -8,6 +8,8 @@ export const DayBorder = styled(Border)`
 `
 
 export const DayOfWeekContainer = styled(Container)`
+  
+
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -18,6 +20,16 @@ export const DayOfWeekContainer = styled(Container)`
     width: 100%;
     height: 50%;
     font-size: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 680px) {
+    font-size: 14px;
+    width: 45vh;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 `
 
@@ -31,5 +43,10 @@ export const Image = styled.img`
   @media (max-width: 768px) {
     height: 120px;
     margin: 0px 10px;
+  }
+
+  @media (max-width: 720px) {
+    height: 60px;
+    margin: 0px;
   }
 `
