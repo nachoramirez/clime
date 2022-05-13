@@ -1,7 +1,7 @@
 
 # Clime web app
 
-A web app for consult the clime on Buenos Aires, Argentina.
+A web app for consult the clime on Buenos Aires, Argentina. This app make use of the Open Weather API (https://openweathermap.org/api) for deploy the wheater information. And create-react-app for the setup of the app.
 
 
 
