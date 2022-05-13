@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/clima/static/js/main.ca85e393.js",
-    "index.html": "/clima/index.html",
-    "main.ca85e393.js.map": "/clima/static/js/main.ca85e393.js.map"
+    "main.js": "/clime/static/js/main.d885c493.js",
+    "index.html": "/clime/index.html",
+    "main.d885c493.js.map": "/clime/static/js/main.d885c493.js.map"
   },
   "entrypoints": [
-    "static/js/main.ca85e393.js"
+    "static/js/main.d885c493.js"
   ]
 }
